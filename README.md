@@ -3,6 +3,8 @@
 
 A functional calculator that performs basic mathematical operations.
 
+**Live Preview:** [Calculator](https://areyad.github.io/calculator/)
+
 ## About 
 
 This project is part of the Foundations JavaScript section of [The Odin Project](https://www.theodinproject.com/lessons/foundations-calculator) curriculum.
