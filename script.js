@@ -81,7 +81,6 @@ function evaluate(operator){
     operation = `${firstNumber} ${operator} ${secondNumber}`
     operationInput.value = `${firstNumber} ${operator} ${secondNumber}`
     operate(firstNumber, operator, secondNumber)
-    // operationInput.value = ""
     valueInput.value = result
     updateDisplay()
     calculationDone = true;
