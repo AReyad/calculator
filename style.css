@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Neuton:ital,wght@0,200;0,300;0,400;0,700;0,800;1,400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+
+.body-wrapper {
+    min-height: 100vh;
+    background-color: #cac9c8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: "Neuton", serif;
+}
+
+.calculator {
+    background-color: black;
+    padding: 1rem;
+    max-width: 450px;
+    border-radius: 1rem;
+    
+}
+
+.buttons {
+    align-items: stretch;
+    display: flex;
+    flex-wrap: wrap;
+    font-weight: 700;
+    max-width: 430px;
+    width: 100%;
+    gap: 1rem;
+    
+}
+
+.button {
+     background-color: #313131;
+    color: white;
+    font-weight: 600;
+    font-size: 1.5rem;
+    padding: 16px;
+    min-width: 92.5px;
+    border-radius: 0.5rem;    
+    border: none;
+    transition: all 0.1s ease-in-out;
+}
+
+.digit:hover {
+    background-color: #313131a8;
+}
+
+.operator {
+  background-color: #f69906;
+}
+
+.operator:hover {
+  background-color: #f69a06ab;
+}
+
+.button:active {
+    transform: scale(0.9);
+}
+
+.grow {
+    flex-grow: 1;
+}
+
+.display {
+    margin-bottom: 1rem;
+    background-color: #a19c9a;
+    font-weight: 700;
+}
+
+.display > * {
+    font-weight: 700;
+    min-width: 100%;
+    padding: 0.2rem 1rem;
+    text-align: right;
+    background-color: transparent;
+    border: none;
+    color: white;
+}
+
+.input {
+    font-size: 2rem;
+}
+
+.operation {
+    font-size: 1.5rem;
+    border-bottom: 2px solid #313131a8;
+}
+
+::placeholder {
+    color: white;
+}
