@@ -71,15 +71,17 @@ function operate(num1,op,num2) {
 }
 
 function updateDisplay() {
-    if(!operation) {
-        operationInput.value = `${firstNumber} ${operator}`
+    operationInput.value = `${firstNumber} ${operator}`
+    if(operation) {
+        operationInput.value = operation
     }
     secondNumber = ""
 }
 
 function evaluate(operator){
-    operation = `${firstNumber} ${operator} ${secondNumber}`
-    operationInput.value = `${firstNumber} ${operator} ${secondNumber}`
+    if(secondNumber !== "") {
+        operation = `${firstNumber} ${operator} ${secondNumber} =`
+    }
     operate(firstNumber, operator, secondNumber)
     valueInput.value = result
     updateDisplay()
@@ -176,11 +178,15 @@ operatorBtns.forEach((operatorBtn) => {
                 updateDisplay()
                 calculationDone = true;
             break;
+            case "clear-all":
+                clearDisplay();
+            break;
+            case "delete":
+                deleteNumber();
+            break;
         }
     })
 })
 
-clearBtn.addEventListener('click', clearDisplay)
-deleteBtn.addEventListener('click', deleteNumber)
 dotBtn.addEventListener('click', addDecimalPoint)
 
