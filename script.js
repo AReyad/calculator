@@ -93,6 +93,7 @@ function clearDisplay() {
     firstNumber = "";
     secondNumber = "";
     operation = "";
+    result = 0;
     valueInput.value = ""
     operationInput.value = `0`
 }
@@ -172,11 +173,13 @@ operatorBtns.forEach((operatorBtn) => {
                 updateDisplay()
             break;
             case "equal":
-                evaluate(operator)
-                op = ""
-                operator = op
-                updateDisplay()
-                calculationDone = true;
+            case operator == op:
+                if(firstNumber != "" && secondNumber != "") {
+                    evaluate(operator)
+                    op = ""
+                    operator = op
+                    updateDisplay()
+                }
             break;
             case "clear-all":
                 clearDisplay();
